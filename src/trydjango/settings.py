@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     # third party
 
     # own
-    'blog',
-    'courses',
     'pages',
     'products',
 ]

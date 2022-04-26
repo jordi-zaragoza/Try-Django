@@ -1,14 +1,20 @@
-<!doctype html>
+<!doctipe html>
 <html>
 <head>
     <title>Coding for Entrepreneurs is doing Try Django</title>
 </head>
 <body>
-   {% include 'navbar.html' %}
+    {% include 'navbar.html' %}
 
-   {% block content %}
-    replace me
-   {% endblock %} 
+    <h1>This is a navbar</h1>
+    {% block content %}
+        replace this
+    {% endblock %}
 
-    </body>
+    <h1> ---------------------- </h1>
+
+    {% block another_content %}
+        another_content block is empty
+    {% endblock %}
+</body>
 </html>
