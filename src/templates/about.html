@@ -2,10 +2,36 @@
 
 {% block content %}
     <h1>About</h1>
+
+    <h3>{{ my_html|safe }}</h3>
     <p>This is a template</p>
 {% endblock content %}
 
 {% block another_content %}
     <h1>Que dise</h1>
     <p>tiia</p>
+
+    <p>
+        {{ title }}, {{ my_number }}
+        {{ my_list }}
+    </p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+<ul>
+{% for abc in my_list %}
+    {% if abc == 3452 %}
+        <li>{{ forloop.counter }} - {{ abc | add:22 }}</li>
+    {% elif abc == "holiii" %}
+        <li>{{ forloop.counter }} - {{ "This is not the network" }}</li>
+    {% else %}
+        <li>{{ forloop.counter }} - {{ abc }}</li>
+    {% endif %}
+
+{% endfor %}
+</ul>
 {% endblock another_content %}
+

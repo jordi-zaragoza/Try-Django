@@ -14,7 +14,14 @@ def contact_view(request, *args, **kargs):
 
 
 def about_view(request, *args, **kargs):
-    return render(request, "about.html", {})
+    my_context = {
+        "title": "this is the new titleo",
+        "my_text": "This is about us",
+        "my_number": 123,
+        "my_list": [42351,3452,"holiii",42222],
+        "my_html": "<h1>hello world</h1>"
+    }
+    return render(request, "about.html", my_context)
 
 
 def social_view(request, *args, **kargs):
