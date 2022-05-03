@@ -1,8 +1,15 @@
+{% url 'about' as about_url %}
+{% url 'contact' as contact_url %}
+{% url 'create' as create_url %}
+{% url 'product' as product_url %}
+{% url 'home' as home_url %}
+
 <nav>
     <ul>
-        <li>Brand</li>
-        <li>Contact</li>
-        <li>About</li>
-        <li>Que dise tia</li>
+        <li><a href="{{home_url}}">Home</a></li>
+        <li><a href="{{about_url}}">About</a></li>
+        <li><a href="{{contact_url}}">Contact</a></li>
+        <li><a href="{{create_url}}">Create</a></li>
+        <li><a href="{{product_url}}">Product</a></li>
     </ul>
 </nav>

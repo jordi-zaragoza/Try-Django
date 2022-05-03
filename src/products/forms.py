@@ -4,6 +4,8 @@ from .models import Product
 
 
 class ProductForm(forms.ModelForm):
+    title = forms.CharField(label="", widget=forms.TextInput(attrs={"placeholder": "Title"}))
+
     class Meta:
         model = Product
         fields = [
@@ -11,3 +13,18 @@ class ProductForm(forms.ModelForm):
             'description',
             'price'
         ]
+
+
+class RawProductForm(forms.Form):
+    title = forms.CharField(label="", widget=forms.TextInput(attrs={"placeholder": "Title"}))
+    description = forms.CharField(
+        required=False,
+        widget=forms.Textarea(
+            attrs={
+                "placeholder": "Description",
+                "class": "new-class-name two",
+                "rows": 20,
+                "cols": 50
+            })
+    )
+    price = forms.DecimalField(initial="199.99")

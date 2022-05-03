@@ -1,20 +1,43 @@
 <!doctipe html>
 <html>
 <head>
-    <title>Coding for Entrepreneurs is doing Try Django</title>
+    <title>Noctiluca</title>
 </head>
+
 <body>
+
+    <h1>Noctiluca</h1>
+
+    <h5> ---------------------------------------------------------------------------------------- </h5>
+
+    <h2>{{ title }}</h2>
+
+    <h5> ---------------------------------------------------------------------------------------- </h5>
+
+<!--    <h5><i>This is the first block content</i></h5>-->
+
+    {% block first_block %}
+        first_block is empty
+    {% endblock %}
+
+    <h5> ---------------------------------------------------------------------------------------- </h5>
+
+<!--    <h5><i>This is the second block content</i></h5>-->
+
+    {% block second_block %}
+        second_block is empty
+    {% endblock %}
+
+    <h5> ---------------------------------------------------------------------------------------- </h5>
+
+<!--    <h5><i>This is a navbar</i></h5>-->
+
     {% include 'navbar.html' %}
 
-    <h1>This is a navbar</h1>
-    {% block content %}
-        replace this
-    {% endblock %}
+    <h5> ---------------------------------------------------------------------------------------- </h5>
 
-    <h1> ---------------------- </h1>
 
-    {% block another_content %}
-        another_content block is empty
-    {% endblock %}
+    <h3>End</h3>
+
 </body>
 </html>
