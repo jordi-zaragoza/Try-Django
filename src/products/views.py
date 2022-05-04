@@ -39,6 +39,7 @@ def product_create_view(request):
         form.save()
 
     context = {
+        'title': 'Product Create',
         'form': form
     }
     return render(request, "products/product_create.html", context)
@@ -51,6 +52,7 @@ def product_detail_view(request):
     #     'description': obj.description
     # }
     context = {
+        'title': 'Product detail',
         'object': obj
     }
     return render(request, "products/product_detail.html", context)

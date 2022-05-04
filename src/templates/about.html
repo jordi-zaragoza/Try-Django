@@ -3,29 +3,20 @@
 {% block first_block %}
 
     <p>
-        <li> {{ my_number }} </li>
-        <li> {{ my_list }} </li>
+        Mis inicios no pudieron ser más distintos a la fotografía… Estudié la carrera de derecho y al acabarla me puse a trabajar en la banca. Durante un tiempo compaginé el trabajo con los estudios de fotografía, y no hizo falta más que un mes para darme cuenta de que había encontrado a lo que me quería dedicar. Me despedí de mi antiguo trabajo y ahí empezó mi viaje en el mundo de la imagen.
+    </p>
+
+    <p>
+        Siempre he tenido muchas inquietudes e intento empaparme de todo lo que me rodea, y laboralmente he aprovechado esta característica para intentar hacer cosas nuevas en cada proyecto que se me presenta.
+    </p>
 
 {% endblock %}
 
 {% block second_block %}
+    <p>
+        Hace años escogí un camino, un viaje…
 
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
-
-    <ul>
-    {% for abc in my_list %}
-        {% if abc == 3452 %}
-            <li>{{ forloop.counter }} - {{ abc | add:22 }}</li>
-        {% elif abc == "holiii" %}
-            <li>{{ forloop.counter }} - {{ "This is not the network" }}</li>
-        {% else %}
-            <li>{{ forloop.counter }} - {{ abc }}</li>
-        {% endif %}
-
-    {% endfor %}
-    </ul>
+        … me acompañas?
+    </p>
 {% endblock %}
 
